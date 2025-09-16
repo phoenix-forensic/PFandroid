@@ -35,3 +35,25 @@ For bug reports or feature requests, continue using the [GitHub Issues](https://
 ## Note 📝
 
 OSMTracker for Android™ official source code repository is [https://github.com/labexp/osmtracker-android](https://github.com/labexp/osmtracker-android).
+
+## PFandroid dashboard realtime testing ⚡️
+
+The PFandroid dashboard now supports realtime GPS anomaly updates via Socket.IO.
+
+To exercise the integration locally:
+
+1. Start the demo backend:
+   ```bash
+   cd server
+   python -m venv .venv
+   source .venv/bin/activate
+   pip install -r requirements.txt
+   python server.py
+   ```
+2. Build and install the Android app in **debug** mode. The debug build automatically points to `http://10.0.2.2:5000`.
+3. Trigger an event from another terminal:
+   ```bash
+   curl -s http://localhost:5000/pixel/teste.png > /dev/null
+   ```
+
+Every call emits a `novo_evento` payload, incrementing the anomaly counter in `GpsAntifragilFragment` almost instantly. For production deployments, update the `socket_url` resource in `app/build.gradle` to the appropriate `wss://` endpoint.
