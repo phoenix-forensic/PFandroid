@@ -14,6 +14,8 @@ android {
         targetSdk 35
         multiDexEnabled true
 
+        manifestPlaceholders = [usesCleartextTraffic: "false"]
+
         // Version code should be increased after each release
         versionCode 70
         versionName new Date().format('yyyy.MM.dd')
@@ -27,9 +29,13 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.findByName('release')
+            manifestPlaceholders += [usesCleartextTraffic: "false"]
+            resValue "string", "socket_url", "wss://your-production-endpoint.example"
         }
         debug {
             versionNameSuffix "-dev"
+            manifestPlaceholders += [usesCleartextTraffic: "true"]
+            resValue "string", "socket_url", "http://10.0.2.2:5000"
         }
     }
 
@@ -97,6 +103,8 @@ dependencies {
     implementation 'androidx.viewpager2:viewpager2:1.1.0'
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'io.socket:socket.io-client:2.1.0'
+    implementation 'org.greenrobot:eventbus:3.3.1'
 
     // Required -- JUnit 4 framework
     testImplementation 'junit:junit:4.13.2'

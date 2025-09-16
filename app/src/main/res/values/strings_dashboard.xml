@@ -119,7 +119,8 @@
     <string name="dashboard_gps_gps_events">GPS Events</string>
     <string name="dashboard_gps_gps_events_value">1,502</string>
     <string name="dashboard_gps_anomalies">Anomalies</string>
-    <string name="dashboard_gps_anomalies_value">62 detected anomalies</string>
+    <string name="dashboard_gps_anomalies_value">0 detected anomalies</string>
+    <string name="dashboard_gps_anomalies_format">%1$d detected anomalies</string>
     <string name="dashboard_gps_data_quality">Data Quality</string>
     <string name="dashboard_gps_data_quality_value">15.0%</string>
     <string name="dashboard_gps_map">GPS Tracking Map</string>
