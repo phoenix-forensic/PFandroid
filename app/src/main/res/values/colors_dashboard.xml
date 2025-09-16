@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="dashboard_background">#050D1F</color>
+    <color name="dashboard_surface">#13243E</color>
+    <color name="dashboard_text_primary">#F8FBFF</color>
+    <color name="dashboard_text_secondary">#94A3B8</color>
+    <color name="dashboard_accent_teal">#5EEAD4</color>
+    <color name="dashboard_status_green">#22C55E</color>
+    <color name="dashboard_status_blue">#38BDF8</color>
+    <color name="dashboard_status_purple">#8B5CF6</color>
+    <color name="dashboard_status_teal">#5EEAD4</color>
+    <color name="dashboard_status_orange">#F97316</color>
+    <color name="dashboard_status_red">#F87171</color>
+    <color name="dashboard_divider">#1E293B</color>
+
+    <color name="gps_background">#F5F7FB</color>
+    <color name="gps_card_background">#FFFFFFFF</color>
+    <color name="gps_text_primary">#1F2937</color>
+    <color name="gps_text_secondary">#64748B</color>
+    <color name="gps_accent_orange">#F97316</color>
+    <color name="gps_accent_green">#22C55E</color>
+</resources>

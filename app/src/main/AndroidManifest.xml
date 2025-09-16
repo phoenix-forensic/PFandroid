@@ -109,6 +109,11 @@
         </activity>
         <activity android:name=".activity.AvailableLayouts" />
 
+        <activity
+            android:name="net.osmtracker.dashboard.DashboardActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+
         <service
             android:name=".service.gps.GPSLogger"
             android:foregroundServiceType="location"
